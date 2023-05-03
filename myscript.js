@@ -29,7 +29,11 @@ author:' - Unknown' },
     {quote:"Sometimes you win, and sometimes you learn.",
     author:'- Robert T. Kiyosaki ' }]
 
-    const randomNumber = Math.floor(Math.random() * quote.length);
+    // Select a random quote from the array
+const randomNumber = Math.floor(Math.random() * quote.length);
+const randomQuote = quote[randomNumber];
 
-    console.log(quote[randomNumber]);
-    //console.log(randomNumber);
+// Update the text content of the blockquote element
+const blockquote = document.querySelector('blockquote');
+blockquote.querySelector('p').textContent = randomQuote.quote;
+blockquote.querySelector('footer').textContent = randomQuote.author;
