@@ -29,11 +29,22 @@ author:' - Unknown' },
     {quote:`"Sometimes you win, and sometimes you learn."`,
     author:'- Robert T. Kiyosaki ' }]
 
-    // Select a random quote from the array
-const randomNumber = Math.floor(Math.random() * quote.length);
-const randomQuote = quote[randomNumber];
+  // Select the Reload button element
+const reloadButton = document.querySelector('button');
 
-// Update the text content of the blockquote element
-const blockquote = document.querySelector('blockquote');
-blockquote.querySelector('p').textContent = randomQuote.quote;
-blockquote.querySelector('footer').textContent = randomQuote.author;
+reloadButton.addEventListener('click', function() {
+  // Select a random quote from the array
+  const randomNumber = Math.floor(Math.random() * quote.length);
+  const randomQuote = quote[randomNumber];
+
+  // Update the text content of the blockquote element
+  const blockquote = document.querySelector('blockquote');
+  blockquote.querySelector('p').textContent = randomQuote.quote;
+  blockquote.querySelector('footer').textContent = randomQuote.author;
+
+   // Change the background color of the page
+   const body = document.querySelector('body');
+   const colors = ['aqua','blue','fuchsia','gray','green','lime','maroon','navy','olive','orange','purple','red','silver','teal','yellow'];
+   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+   body.style.backgroundColor = randomColor;
+});
