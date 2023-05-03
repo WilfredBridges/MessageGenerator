@@ -32,7 +32,7 @@ author:' - Unknown' },
   // Select the Reload button element
 const reloadButton = document.querySelector('button');
 
-reloadButton.addEventListener('click', function() {
+reloadButton.onclick = function() {
   // Select a random quote from the array
   const randomNumber = Math.floor(Math.random() * quote.length);
   const randomQuote = quote[randomNumber];
@@ -47,4 +47,4 @@ reloadButton.addEventListener('click', function() {
    const colors = ['aqua','blue','fuchsia','gray','green','lime','maroon','navy','olive','orange','purple','red','silver','teal','yellow'];
    const randomColor = colors[Math.floor(Math.random() * colors.length)];
    body.style.backgroundColor = randomColor;
-});
+};
